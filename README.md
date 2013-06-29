@@ -7,6 +7,8 @@
 
 FuriganaView is a widget for Android. It renders text simlarily to TextView, but adds small lines of furigana on top of Japanese kanji. The furigana has to be supplied to the widget within the text.
 
+Demo: ![furigana-view](http://yutani.ee/furigana-view/demo.png)
+
 ## Techical ##
 
 ### FuriganaView class ###
