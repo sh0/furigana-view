@@ -50,6 +50,12 @@ public class FuriganaView extends View
         public void draw(Canvas canvas, float x, float y)
         {
             x -= m_width / 2.0f;
+            if(x < 0){
+				x = 0;
+			}
+			else if(x + m_width > canvas.getWidth()){
+				x = canvas.getWidth() - m_width;
+			}
             canvas.drawText(m_text, 0, m_text.length(), x, y, m_paint_f);
         }
     }
@@ -480,7 +486,11 @@ public class FuriganaView extends View
             
             // Initial span
             int span_i = 0;
-            Span span = m_span.get(span_i);
+
+            Span span = null;
+            if(m_span.size() != 0) {
+                span = m_span.get(span_i);
+            }
             
             // Iterate
             while (span != null) {
